@@ -35,7 +35,7 @@ void RadixSort(int* array, int size)
         }
     }
 }
-
+/*
 
 int main(int args, char** argc)
 {
@@ -71,3 +71,4 @@ int main(int args, char** argc)
 
     return 1;
 }
+*/

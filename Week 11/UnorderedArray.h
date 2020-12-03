@@ -105,6 +105,7 @@ public:
 	{
 		QuickSort(0, m_numElements - 1);
 	}
+	
 	/*
 	int Partition(T pivot)
 	{
@@ -312,7 +313,6 @@ private:
 	{
 		// Check whether I have enough items to do a quick sort
 		// If not, do an InsertionSort instead
-
 		if ((rVal - lVal + 1) < QUICKSORT_CUTOFF)
 		{
 			// Not enough items
@@ -338,9 +338,10 @@ private:
 
 		int pivotIndex = Partition(lVal, rVal, center);
 
-		QuickSort(lVal, pivotIndex - 1);	 // QuickSort the left half
-		QuickSort(pivotIndex, rVal);		// QuickSort the right half
+		QuickSort(lVal, pivotIndex - 1);	// Quicksort the left half
+		QuickSort(pivotIndex, rVal);		// Quicksort the right half
 	}
+
 	int Partition(int lIndex, int rIndex, int pivot)
 	{
 		while (1)
@@ -350,14 +351,16 @@ private:
 
 			if (lIndex >= rIndex)
 			{
+				// Done partitioning
 				break;
 			}
 
 			SwapElements(lIndex, rIndex);
 		}
 
-		return lIndex;
+		return lIndex;	// Where the pivot point is on the array
 	}
+
 	void InsertionSort(int lVal, int rVal)
 	{
 		assert(m_array != NULL);

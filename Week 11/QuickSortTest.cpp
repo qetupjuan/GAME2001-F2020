@@ -3,12 +3,12 @@
 
 using namespace std;
 
-/*
+
 int main(int args, char* arg[])
 {
     cout << "Quicksort Algorithm" << endl << endl;
 
-    const int size = 10;
+    const int size = 100;
     int i = 0;
     UnorderedArray<int> array(size);
 
@@ -36,4 +36,3 @@ int main(int args, char* arg[])
 
     return 1;
 }
-*/
